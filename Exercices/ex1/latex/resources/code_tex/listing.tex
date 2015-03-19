@@ -1,0 +1,42 @@
+\footnotesize
+\begin{verbatim}
+ 1      public class Start {
+ 2     
+ 3         A f1;
+ 4         B f2;
+ 5         C f3;
+ 6     
+ 7         public Start() {
+ 8             f1 = new A();
+ 9             f2 = new B();
+10             f3 = new C();
+11             f1.message();
+12             f1=f2;
+13             f1.message();
+14             f1=f3;
+15             f1.message();
+16             f2.message_from_a();
+17             f3.message();}
+18      
+19         public static void main(String args[]) {
+20             new Start();}
+21     }
+22      
+23     class A {
+24         void message() {
+25             System.out.print("A ");}
+26      }
+27      
+28     class B extends A {
+29         void message() {
+30             System.out.print("B ");}
+31         void message_from_a() {
+32             super.message();}
+33     }
+34     
+35     class C extends A {
+36         void message() {
+37             System.out.print("C ");}
+38     }
+      \end{verbatim}
+      \normalsize

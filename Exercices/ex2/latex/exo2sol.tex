@@ -1,0 +1,44 @@
+\solution{Static and dynamic types}
+\paragraph{\sc{Definitions}}
+\begin{itemize}
+ \item \textbf{Static Type:} the static type of a variable references its type
+declaration at compile time
+\item \textbf{Dynamic Type:} the dynamic type of a variable is the real type of
+the object the varialbe is referencing.
+\end{itemize}
+
+\paragraph{\sc{Example}}
+\begin{itemize}
+ \item A variable \texttt{Dog} (static) can point to an object of type
+\texttt{Dalmation} (dynamic).
+\item \emph{Warning:} The inverse is not possible
+\end{itemize}
+
+\paragraph{\sc{Answer}}
+\begin{itemize}
+ \item At compilation
+ \begin{itemize}
+  \item The static type of \texttt{f1} is \texttt{A}.
+  \item The static type of \texttt{f2} is \texttt{B}.
+  \item The static type of \texttt{f3} is \texttt{C}.
+ \end{itemize}
+ \item At runtime
+ \begin{itemize}
+  \item on line 8: the dynamic type of \texttt{f1} is \texttt{A}.
+  \item on line 9: the dynamic type of \texttt{f2} is \texttt{B}.
+  \item on line 10: the dynamic type of \texttt{f3} is \texttt{C}.
+  \item on line 11: the dynamic type of \texttt{f1} is still \texttt{A}
+$\Rightarrow$ shown text is \texttt{A}.
+  \item on line 12: the dynamic type of \texttt{f1} becomes \texttt{B}.
+  \item on line 13: the dynamic type of \texttt{f1} is thus \texttt{B}
+$\Rightarrow$ shown test is \texttt{B}.
+  \item on line 14: the dynamic type of \texttt{f1} becomes \texttt{C}.
+  \item on line 15: the dynamic type of \texttt{f1} is thus \texttt{C}
+$\Rightarrow$ shown text is \texttt{C}.
+  \item on line 16: the dynamic type of \texttt{f2} is still \texttt{B}
+$\Rightarrow$ shown text is \texttt{A}.
+  \item on line 17: the dynamic type of \texttt{f3} is still \texttt{C}
+$\Rightarrow$ shown test is \texttt{C}.
+ \end{itemize}
+ \item The shown text is \texttt{A B C A C}.
+\end{itemize}
