@@ -84,7 +84,7 @@ Comment ce système fonctionne-t-il? La génération des séries et solutions et
             * code
             * figures
 
-Si on ne respecte pas cette structure, le script ne peut pas interpréter l’exercice. On voit qu’il y a deux répertoires: code et latex. Le répertoire code contient tous les documents annexes qui sont distribués avec la série (chez moi en général du code, d’où le nom du répertoire). Il y a un sous-répertoire pour les documents à distribuer avec la donnée et un sous-répertoire pour les documents à distribuer avec la solution. Le répertoire latex contient la donnée de l’exercice ainsi que sa solution. Ce répertoire possède aussi un sous-répertoire resources. Là-dedans on peut mettre toutes les ressources utilisées pour l’énoncé et la solution (chez moi c’est soit du code soit des figures). Il est à noter que pour inclure des fichiers dans le code LaTeX il faut précéder le chemin vers le fichier par \includepath/, ce qui donnerait par exemple:
+Si on ne respecte pas cette structure, le script ne peut pas interpréter l’exercice. On voit qu’il y a deux répertoires: code et latex. Le répertoire code contient tous les documents annexes qui sont distribués avec la série (chez moi en général du code, d’où le nom du répertoire). Il y a un sous-répertoire pour les documents à distribuer avec la donnée et un sous-répertoire pour les documents à distribuer avec la solution. Le répertoire latex contient la donnée de l’exercice ainsi que sa solution. Ce répertoire possède aussi un sous-répertoire ressource. Là-dedans, on peut mettre toutes les ressources utilisées pour l’énoncé et la solution (chez moi c’est soit du code soit des figures). Il est à noter que pour inclure des fichiers dans le code LaTeX il faut précéder le chemin vers le fichier par \includepath/, ce qui donnerait par exemple:
 ```
 \begin{figure}[h]
 \centering
@@ -157,8 +157,12 @@ exo-numbers: 3,4
 ```
 On voit qu’il y a deux clés: titles et exo-numbers. Les titles sont utilisés pour faire un résumé de la série d’exercices alors que la partie exo-numbers définit quels exercices sont à inclure dans la série d’exercices.
 À partir de là il suffit de lancer le script dans le même répertoire que le fichier lecture.cfg. Le script propose une option d’aide (--help) qui explique en détail comment utiliser les différents paramètres au script. Pour compiler la série d’exercices 4 par exemple, il faut appeler le script comme suit:
-serieManagementSystem.py --build-serie -s 4
+```
+seriesManagementSystem --build-serie -s 4
+```
 ou bien pour compiler toutes les series d’exercices:
-serieManagementSystem.py --build-all-series
+```
+seriesManagementSystem --build-all-series
+```
 Vu que le cours est configuré entièrement via le fichier lecture.cfg, le même script peut être utilisé pour gérer plusieurs cours différents en parallèle. 
 
