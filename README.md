@@ -1,43 +1,51 @@
-* To get help type following command in the console:
+To get help type following command in the console:
+```
+python serieManagementSystem.py --help
+```
 
-    python serieManagementSystem.py --help
+To create a new exercise empty structure type:
+```
+python serieManagementSystem.py --make-new-exercise
+```
 
-* To create a new exercise empty structure type:
-
-    python serieManagementSystem.py --make-new-exercise
- 
-* To build a new serie:
+To build a new serie:
 (First check that the corresponding .cfg file is correctly setup)
-
-    python serieManagementSystem.py --build-serie
-
+```
+python serieManagementSystem.py --build-serie
+```
 You will be prompted for the serie number, answer and then the system will generate everything for a given serie; the solution and creates a zip file for Moodle containing all ressources.
 
-* To create all the series
-
-    python serieManagementSystem.py --build-all-series
-
+To create all the series
+```
+python serieManagementSystem.py --build-all-series
+```
 This creates a big zip file with all the series and their solutions. Just upload this zip to Moodle, extract it and voilà!
 
-* To generate a quick pdf preview for a given exercice
-    
-    python serieManagementSystem.py --preview-exercise
+To generate a quick pdf preview for a given exercice
+```    
+python serieManagementSystem.py --preview-exercise
+```
 
-* To generate a quick pdf preview for a given exercice solution
+To generate a quick pdf preview for a given exercice solution
+```
+python serieManagementSystem.py --preview-solution
+```
 
-    python serieManagementSystem.py --preview-solution
+To create a single PDF containing all series and the associated solutions as they were distributed
+```    
+python serieManagementSystem.py --make-workbook
+```
 
-* (TODO does not work yet) To create a single PDF containing all series and the associated solutions as they were distributed
-    
-    python serieManagementSystem.py --make-workbook
-
-* (TODO does not work yet) To create a single PDF containing the collection of exercises
-
-    python serieManagementSystem.py --make-catalogue
+To create a single PDF containing the collection of exercises
+```
+python serieManagementSystem.py --make-catalogue
+```
 
 ==========================================================================================
+
 Notes de l'auteur du logiciel SMS: Andreas Ruppen
 http://digsim.is-a-geek.com/bricoles/seriesmanagementsystem.html
+
 ==========================================================================================
 
 SerieManagementSystem, ou bien SMS pour les intimes est un utilitaire permettant de gérer de manière efficace les séries d’exercices. Définissons d’abord ce qu’est une série d’exercices:
